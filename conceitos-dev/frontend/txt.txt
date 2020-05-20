@@ -1,0 +1,34 @@
+/*
+Babel: Converter (transpilar) código do React para um código que o browser entenda.
+Webpack: Pra cada tipo de arquivo (.js, .css,.png) eu vou converter o código de uma maneira diferente.
+
+Loaders: babel-loader, css-loader, image-loader
+*/
+
+Cria o package.json
+yarn init -y 
+
+Integração do React com o React DOM (HTML - React para WEB)
+yarn add react react-dom
+
+@babel/preset-env = Converter o JS moderno para um JS mais antigo, baseado no ambiente da aplicação
+@babel/preset-react = Adicionar as funcionalidades do React na conversão do @babel/preset-env
+yarn add @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli
+
+Interface de linha de comando para utilizar no terminal
+yarn add @babel/cli
+
+Roda o JS e cria uma pasta para o script executado
+yarn babel src/index.js --out-file public/bundle.js
+
+LOader do Babel
+yarn add babel-loader
+
+Converter para o bundle.js
+yarn webpack --mode development 
+
+Servidor de desenvolvimento do Webpack
+yarn add webpack-dev-server -D 
+
+Servidor Node (Live Reloading)
+yarn webpack-dev-server --mode development
