@@ -32,3 +32,15 @@ yarn add webpack-dev-server -D
 
 Servidor Node (Live Reloading)
 yarn webpack-dev-server --mode development
+
+Interpretar os arquivos em .css
+yarn add style-loader css-loader
+
+Carregar arquivos dentro da aplicação
+yarn add file-loader   
+
+Fazer chamadas a api
+yarn add axios 
+
+Runtime
+yarn add @babel/plugin-transform-runtime -D
