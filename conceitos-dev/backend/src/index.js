@@ -32,7 +32,7 @@ Interceptador de requisições que interrompe totalmente a requisição ou alter
 
 const projects = [];
 
-function logRequests(request, reponse, next) {
+function logRequests(request, response, next) {
     const { method, url } = request;
 
     const logLabel = `[${method.toUpperCase()}] ${url}`;
@@ -62,7 +62,7 @@ app.get('/projects', (request, response) => {
 
     const results = title ? projects.filter(project => project.title.includes(title)) : projects;
 
-    return response.json([ results ]);
+    return response.json(results);
 });
 
 app.post('/projects', (request, response) => {
@@ -72,7 +72,7 @@ app.post('/projects', (request, response) => {
 
     projects.push(project);
 
-    return response.json([ projects ]);
+    return response.json(project);
 });
 
 app.put('/projects/:id', (request, response) => {
@@ -93,7 +93,7 @@ app.put('/projects/:id', (request, response) => {
 
     projects[projectIndex] = project;
 
-    return response.json([ project ]);
+    return response.json(project);
 });
 
 app.delete('/projects/:id', (request, response) => {
