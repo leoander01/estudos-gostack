@@ -20,6 +20,7 @@
     ],
     "rules": {
         "prettier/prettier": "error",
+        "@typescript-eslint/camelcase": "off",
         "import/extensions": [
             "error",
             "ignorePackages",
