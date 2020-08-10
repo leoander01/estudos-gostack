@@ -10,7 +10,8 @@ import Repository from '../pages/Repository';
 const Routes: React.FC = () => (
     <Switch>
         <Route path='/' exact component={Dashboard} />
-        <Route path='/repository' component={Repository} />
+         {/* O '+' é para reconhecer tudo o que depois de /repository/ */}
+        <Route path='/repositories/:repository+' component={Repository} />
     </Switch>
 )
 
